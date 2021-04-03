@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  <title>Cluckr</title>
+</head>
+<body>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/index">
+                <!-- 128035	1F423 -->   
+                &#128035
+                <!-- <img src="https://www.pinclipart.com/picdir/middle/170-1704782_chicken-cartoon-png-clipart.png" alt="chicken"> -->
+            </a>
+      
+            <div class="form-inline my-2 my-lg-0" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item mr-3">
+                  <a class="nav-link btn btn-secondary" href="/new_cluck">Cluck!</a>
+                </li>
+                <% if (username) { %>
+                <li class="text-secondary mr-3 mt-2">
+                  <div> <%= username %> </div>
+                </li>
+                <li class="nav-item">
+                  <form class="d-flex" action="/sign_out" method="POST">
+                    <!-- <input class="nav-link" style="border: 0; background-color: #ffffff00;" type="submit" value="Sign Out"> -->
+                    <input class="nav-link btn btn-secondary" type="submit" value="Sign Out">
+                  
+                  </form>
+                  <% } else { %> 
+                  <a class="nav-link btn btn-secondary" href="/sign_in">Sign In</a>
+                  <% } %> 
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    <div class="container">

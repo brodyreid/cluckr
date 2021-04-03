@@ -1,0 +1,22 @@
+<%- include('./partials/header')  %>
+
+<h1>Current Clucks</h1>
+<% for (let cluck of clucks) {%>
+    <div class='card'>
+        <div class='card-body'>
+            <div class="d-flex justify-content-between">
+                <h4><%= cluck.username %></h4>
+                <% date = new Date(cluck.created_at) %> 
+                <%= date.toDateString() %>
+            </div>
+            <div class='card-text'>
+                <%= cluck.content %> 
+            </div>
+            <% if (cluck.imageURL) { %> 
+            <div>
+                <img src="<%= cluck.imageURL %>" class="card-img-top w-25" alt="imageURL">
+            </div>
+            <% } %> 
+        </div>
+    </div>
+    <% } %> 

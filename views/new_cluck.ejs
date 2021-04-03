@@ -1,0 +1,26 @@
+<%- include('./partials/header')  %>
+<% if (username) { %>
+<form action="/index" method="POST">
+    <div class="card" style="width: 25rem;">
+        <div class="card-body">
+            <div>
+                <label for="content" class="form-label text-secondary">Content</label>
+            </div>
+            <div class="mb-3">
+                <textarea type="text" class="form-control" rows="3" id="content" name="content" placeholder="Whatchoo cluckin' 'bout?"></textarea>
+            </div>
+            <div>
+                <label for="logoURL" class="form-label text-secondary">Image URL</label>
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" id="imageURL" name="imageURL" placeholder="https://picturesofchickens.gov.ca/images/smiling1">
+            </div>
+            <div class="float-right">
+            <input type="submit" class="btn btn-outline-secondary" value="Cluck!">
+            </div>
+        </div>
+    </div>
+</form>
+<% } else { %>
+    <p>You must be signed in to post.</p>
+    <% } %> 
